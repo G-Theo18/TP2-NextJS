@@ -19,7 +19,7 @@ export default async function Home({
     <main className="mx-auto p-10">
       <ul className="grid gap-8 lg:grid-cols-3">
         {articles.map((article) => (
-          <li key={article.id} className="rounded-lg border p-4">
+          <li key={article.id} className="rounded-lg border p-4 bg-white">
             <Link href={`/articles/${article.slug}?id=${article.id}`}>
               {article.cover_image && (
                 <Image
@@ -42,17 +42,17 @@ export default async function Home({
 
       <nav className="mt-8 flex justify-between">
         {currentPage > 1 ? (
-          <Link href={`/?page=${currentPage - 1}`} className="border-2 border-amber-700 px-4 py-2 rounded-lg">
+          <Link href={`/?page=${currentPage - 1}`} className="border-2 border-black bg-white px-4 py-2 rounded-lg">
               ← Page précédente
             </Link>
           ) : (
           <span />
         )}
 
-        <span className="text-amber-700 font-semibold">Page {currentPage}</span>
+        <span className="text-black font-semibold">Page {currentPage}</span>
 
         {hasNext ? (
-          <Link href={`/?page=${currentPage + 1}`} className="border-2 border-amber-700 px-4 py-2 rounded-lg">Page suivante →</Link>
+          <Link href={`/?page=${currentPage + 1}`} className="border-2 border-black bg-white px-4 py-2 rounded-lg">Page suivante →</Link>
         ) : (
           <span />
         )}

@@ -20,7 +20,7 @@ export default async function ArticlePage({
   }
 
   return (
-    <main className="mx-auto max-w-3xl p-8">
+    <main className="mx-auto max-w-3xl p-8 bg-mist-300">
       {article.cover_image && (
         <Image
           src={article.cover_image}
@@ -31,7 +31,7 @@ export default async function ArticlePage({
         />
       )}
 
-      <p className="mb-8 text-gray-500">
+      <p className="mb-8">
         {formatDate(article.published_at)} - {article.comments_count} comments
       </p>
       <h1 className="text-3xl font-bold mb-8 text-amber-800">{article.title}</h1>

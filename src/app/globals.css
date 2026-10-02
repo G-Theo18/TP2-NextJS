@@ -1,6 +1,11 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
+  --background: #F8F8F2;
   --foreground: #171717;
+}
+
+body {
+  background-color: var(--background);
 }

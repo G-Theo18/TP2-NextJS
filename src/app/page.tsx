@@ -19,7 +19,7 @@ export default async function Home({
     <main className="mx-auto p-10">
       <ul className="grid gap-8 lg:grid-cols-3">
         {articles.map((article) => (
-          <li key={article.id} className="rounded-lg border p-4 bg-white">
+          <li key={article.id} className="rounded-lg border p-4 bg-mist-100">
             <Link href={`/articles/${article.slug}?id=${article.id}`}>
               {article.cover_image && (
                 <Image
@@ -27,7 +27,8 @@ export default async function Home({
                   alt={article.title}
                   width={500}
                   height={210}
-                  className="rounded-lg mb-2"
+                  priority
+                  className="w-full h-auto rounded-lg mb-2"
                 />
               )}
               <p className="mb-4 text-gray-500">

@@ -20,14 +20,15 @@ export default async function ArticlePage({
   }
 
   return (
-    <main className="mx-auto max-w-3xl p-8 bg-mist-300">
+    <main className="mx-auto max-w-3xl p-8 bg-mist-100 rounded-lg">
       {article.cover_image && (
         <Image
           src={article.cover_image}
           alt={article.title}
           width={1000}
           height={420}
-          className="mb-2"
+          priority
+          className="w-full h-auto mb-2"
         />
       )}
 
@@ -37,9 +38,10 @@ export default async function ArticlePage({
       <h1 className="text-3xl font-bold mb-8 text-amber-800">{article.title}</h1>
 
       <div
-        className="prose max-w-none"
-        dangerouslySetInnerHTML={{ __html: article.body_html ?? "" }}
+        className="prose lg:prose-lg"
+        dangerouslySetInnerHTML={{__html: article.body_html ?? ""}}
       />
     </main>
   );
 }
+

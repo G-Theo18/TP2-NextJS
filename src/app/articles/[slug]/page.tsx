@@ -2,11 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getArticle, formatDate } from "../../lib/devto";
 
-export default async function ArticlePage({
-  searchParams,
-}: {
-  searchParams: Promise<{ id?: string }>;
-}) {
+export default async function ArticlePage({searchParams}: {searchParams: Promise<{ id?: string }>}) {
   const { id } = await searchParams;
 
   if (!id) {

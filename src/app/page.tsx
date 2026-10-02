@@ -4,11 +4,7 @@ import { getArticles, formatDate } from "./lib/devto";
 
 const PER_PAGE = 9;
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: Promise<{ page?: string }>;
-}) {
+export default async function Home({searchParams}: {searchParams: Promise<{ page?: string }>}) {
   const { page } = await searchParams;
   const currentPage = Math.max(1, Number(page) || 1);
 
